@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>formulaire</title>
+</head>
+
+<body class="bg">
+  <header class="flex item-center space-between">
+    <!-- header gauche -->
+    <div class="flex item-center space-between width-30">
+      <a href="index.html" class="logo"><img src="./assets/img/logo-noir.png" alt="logo des 4 elements" /></a>
+      <nav>
+        <ul class="flex gap20">
+          <li><a href="feu.html">Feu</a></li>
+          <li><a href="">Air</a></li>
+          <li><a href="">Terre</a></li>
+          <li><a href="">Eau</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- header Droite -->
+    <div class="flex item-center space-between width-30">
+      <nav>
+        <ul class="flex gap20 item-center">
+          <li><a href="">Contact</a></li>
+          <li>
+            <a href="" class="flex item-center"><img src="./assets/icon/instagram.svg" alt="logo instagram" /></a>
+          </li>
+          <li>
+            <a href="" class="flex item-center"><img src="./assets/icon/facebook.svg" alt="logo facebook" /></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex gap20 item-center">
+        <button type="submit" class="btn">Reserver</button>
+        <a href="">Se connecter</a>
+      </div>
+    </div>
+  </header>
+  <!-- formulaire -->
+  <main>
+    <form action="" method="post">
+      <!-- sectino information -->
+      <div class="information">
+        <fieldset>
+          <legend>Information personnelle</legend>
+          <div class="name padding-bottom10">
+            <label for="nom">Nom : </label>
+            <input class="" type="text" name="nom" id="nom" />
+            <p class="p-error d-none" id="error-nom">message d'erreur</p>
+            <label for="prenom">Prenom : </label>
+            <input type="text" name="prenom" id="prenom"/>
+            <p class="p-error d-none flex" id="error-prenom">message d'erreur</p>
+          </div>
+          <div class="rue">
+            <p class="bold">Adresse postale de la facturation : </p>
+            <br />
+            <label for="rue">rue :</label>
+            <input class="" type="text" name="rue" id="rue" />
+            <p class="p-error d-none " id="error-rue">message d'erreur</p>
+            <label for="num">Numero : </label>
+            <input type="number" name="num" id="num" min="0" />
+            <p class="p-error d-none " id="error-num">message d'erreur</p>
+          </div>
+          <div class="ville">
+            <label for="ville">Ville :</label>
+            <input type="text" name="ville" id="ville" />
+            <p class="p-error d-none " id="error-ville">message d'erreur</p>
+            <label for="code-postal">Code-postal :</label>
+            <input type="text" name="code-postal" id="code-postal" inputmode="numeric" />
+            <p class="p-error d-none" id="error-code-postal">message d'erreur</p>
+          </div>
+          <div class="width-100 name">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" novalidate/>
+            <p class="p-error d-none " id="error-email">message d'erreur</p>
+            <label for="tel">Téléphone :</label>
+            <input type="tel" name="tel" id="tel" />
+            <p class="p-error d-none " id="error-tel">message d'erreur</p>
+          </div>
+          <div><button type="button" class="suivant-information btn">Suivant</button></div>
+        </fieldset>
+      </div>
+      <!-- section reservation -->
+      <div class="reservation">
+        <div><a href="#" class="btn" id="retour-reservation">&#8592; retour</a></div>
+        <fieldset>
+          <legend>Information sur la résérvation :</legend>
+          <div>
+            <label for="choix">Choix de l'hotel</label>
+            <select name="choix" id="choix">
+              <option value="">Choisissez votre hotel</option>
+              <option value="feu">feu</option>
+              <option value="terre">terre</option>
+              <option value="eau">eau</option>
+              <option value="mer">mer</option>
+            </select>
+            <p class="p-error d-none">message d'erreur</p>
+          </div>
+          <div class="radio nuit-proposer">
+            <label for="formule">Formule :</label>
+            <select name="formule" id="formule">
+              <option value="">Choisissez votre formule</option>
+              <option value="igloo">chambre iglo 500€</option>
+              <option value="laponne">Suite laponne 850€</option>
+            </select>
+            <p class="p-error d-none">message d'erreur</p>
+
+          </div>
+          <div>
+            <label for="nb-pers">Nombre de personne ?</label>
+            <input type="number" name="nb-pers" id="nb-pers" value="2" />
+            <p class="p-error d-none">message d'erreur</p>
+
+          </div>
+          <div>
+            <label for="arrivee">Date d'arrivée :</label>
+            <input type="date" name="arrivee" id="arrivee" />
+            <label for="depart">depart</label>
+            <input type="date" name="depart" id="depart" />
+            <p class="p-error d-none">message d'erreur</p>
+
+          </div>
+          <div><a href="#" class="btn suivant-reservation">Suivant</a></div>
+        </fieldset>
+      </div>
+      <div>
+        <!-- setion service supplementaire -->
+        <div class="supplementaire">
+          <div><a href="#" class="btn" id="retour-supplementaire">&#8592; retour</a></div>
+          <fieldset>
+            <legend>Service supplémentaire</legend>
+            <div>
+              <label for="chauffeur">Chauffeur : 11€ / jours</label>
+              <input type="checkbox" name="chauffeur" id="chauffeur" />
+              <br />
+            </div>
+            <div>
+              <label for="petit-dej">Petit-déjeuner : 15€ / personnes / jours</label>
+              <input type="checkbox" name="petit-dej" id="petit-dej" />
+            </div>
+            <div>
+              <label for="repas">Repas :</label>
+              <input type="checkbox" name="repas" id="repas">
+              <div class="repas-detail">
+                <ul>
+                  <li>
+                    <label for="midi">midi</label>
+                    <input type="checkbox" name="midi" id="midi" />
+                  </li>
+                  <li>
+                    <label for="soir">soir</label>
+                    <input type="checkbox" name="soir" id="soir" />
+                  </li>
+                  <li>
+                    <label for="ponctuel">ponctuel(dans ce cas le prix du repas ne sera pas
+                      comptabilisé dans la résérvation mais sera dû
+                      directement auprès du service de restauration, prévenir
+                      la vieille )</label>
+                    <input type="checkbox" name="ponctuel" id="ponctuel" />
+                  </li>
+                </ul>
+  
+              </div>
+              <!-- option au menu -->
+              <div class="option-checked">
+                <input type="checkbox" name="gluten" id="gluten" />
+                <label for="gluten">sans gluten</label>
+
+                <input type="checkbox" name="lactose" id="lactose" />
+                <label for="lactose">sans lactose</label>
+
+                <label for="autre">Autre allérgie et intolérences</label>
+                <input type="checkbox" name="autre" id="autre" />
+
+                <div class="autre-checked">
+                  <label for="explication">Autres infos sur vos allérgies</label>
+                  <input type="text" name="explication" id="explication" placeholder="Notez vos allérgies ici..." />
+                </div>
+
+                <label for="regime">végan</label>
+                <input type="radio" name="regime" id="vegan" />
+
+                <label for="regime">végétarien</label>
+                <input type="radio" name="regime" id="vegetarien" />
+
+                <label for="regime">non</label>
+                <input type="radio" name="regime" id="non" />
+              </div>
+            </div>
+            <div>
+              <label for="visite">Visite guidée du domaine et du parc naturel alentour 20€
+              </label>
+              <input type="checkbox" name="visite" id="visite" />
+            </div>
+            <div><button type="submit" class="btn btn-supp">Suivant</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+    <!-- modal -->
+    <div class="info modal flex">
+      <div class="width-100 padding-bottom20">
+        <p class="bold">Réccapitulatif</p> <br>
+        <div>
+          <p>nom : </p>
+          <p>prenom : </p>
+          <p>Adresse : </p>
+          <p>Tel : </p>
+          <p>Mail : </p>
+        </div>
+      </div>
+      <div class="resa width-100 padding-bottom20">
+        <p class="bold padding-bottom10">Résérvation</p>
+        <p>Résérvation pour la cambre feu : </p>
+        <p>nombres de personnes : 2</p>
+        <p>date d'arrivée : date de départ :</p>
+      </div>
+      <div class="option width-100 padding-bottom20">
+        <p class="bold padding-bottom20">Service supplémentaire</p>
+        <p>vous avez séléctionné :</p>
+      </div>
+      <div class="flex btn-valider-retour">
+        <div class="flex space-arround modal-btn">
+          <div><a href="" class="btn btn-annuler">Retour à la saisie</a></div>
+          <div><input type="submit" value="Valider">Valider</div>
+        </div>
+        <a href="formulaire.html" class="annuler">Annuler la réservation</a>
+      </div>
+    </div>
+  </main>
+  <!-- footer  -->
+
+  <footer class="flex space-between">
+    <div class="footer-left flex width-30">
+      <a href="" class="logo">
+        <img src="./assets/img/logo-noir.png" alt="logo des 4 elements" />
+      </a>
+      <p>
+        N’attendez plus pour vivre l’expérience 4 éléments le temps d’une
+        nuit.
+      </p>
+      <div class="flex social-reseaux">
+        <a href=""><img src="./assets/icon/instagram.svg" alt="logo instagram" /></a>
+        <a href=""><img src="./assets/icon/facebook.svg" alt="logo de facebbok" /></a>
+      </div>
+    </div>
+    <!-- footer center -->
+    <div class="footer-center flex width-30">
+      <h4>Contact</h4>
+      <p>Adresse : 8 avenue exemple</p>
+      <p>Ouverture : Tous les jours de 9h à 20h30</p>
+      <p>tél : <a href="">33 08 280 28002</a></p>
+      <button type="submit" class="btn width-50">Reserver en ligne</button>
+    </div>
+    <!-- footer right -->
+    <div class="footer-right width-30">
+      <nav>
+        <ul>
+          <li><a href="">Mentions légales</a></li>
+          <li><a href="">Crédits</a></li>
+          <li><a href="">CGV</a></li>
+          <li><a href="">Confidentialité</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

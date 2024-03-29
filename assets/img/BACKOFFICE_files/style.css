@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Generalite*/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.item-center {
+  align-items: center;
+}
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+.btn input{
+    padding: 11px 18px;
+    background-color: F0515A;
+}
+/*header*/
+.logo {
+    background-image: url(./img/Logo.png);
+  }
+  .Picto {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url(./img/sprite1.png);
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+  .picto-compta {
+    background-position: 0 0;
+  }
+  .picto-produits {
+    background-position: -32px 0;
+  }
+  .picto-fournisseurs {
+    background-position: -64px 0;
+  }
+  .picto-commandes {
+    background-position: -96px 0;
+  }
+  .picto-parametres {
+    background-position: -128px 0;
+  }
+  .picto-add {
+    background-position: 288px 0;
+  }
+  
+.baniere {
+  position: absolute;
+  align-items: center;
+  padding-left: 38px;
+  background-color: #f0515a;
+  width: calc(100% - 250px);
+  height: 64px;
+  right: 0;
+  top: 0;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+}
+.header {
+  background-color: #323232;
+  width: 250px;
+  height: 100vh;
+}
+nav ul {
+margin-top: 100%;
+margin-left: 30px;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 1.2rem;
+}
+nav ul li {
+  width: 100%;
+}
+/*Search*/
+.search{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+.search-input>input{
+    width: 500px;
+    height: 42px;
+}
